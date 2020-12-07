@@ -165,7 +165,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-font-color2: rgba(0, 0, 0, 0.54);
   --jp-content-font-color3: rgba(0, 0, 0, 0.38);
 
-  --jp-content-link-color: var(--md-blue-700);
+  --jp-content-link-color: var(--md-red-700);
 
   --jp-content-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -199,9 +199,9 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   --jp-layout-color0: white;
   --jp-layout-color1: white;
-  --jp-layout-color2: var(--md-grey-200);
-  --jp-layout-color3: var(--md-grey-400);
-  --jp-layout-color4: var(--md-grey-600);
+  --jp-layout-color2: var(--md-green-200);
+  --jp-layout-color3: var(--md-green-400);
+  --jp-layout-color4: var(--md-green-600);
 
   /* Inverse Layout
    *
@@ -210,17 +210,17 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-inverse-layout-color0: #111111;
-  --jp-inverse-layout-color1: var(--md-grey-900);
-  --jp-inverse-layout-color2: var(--md-grey-800);
-  --jp-inverse-layout-color3: var(--md-grey-700);
-  --jp-inverse-layout-color4: var(--md-grey-600);
+  --jp-inverse-layout-color1: var(--md-red-900);
+  --jp-inverse-layout-color2: var(--md-red-800);
+  --jp-inverse-layout-color3: var(--md-red-700);
+  --jp-inverse-layout-color4: var(--md-red-600);
 
   /* Brand/accent */
 
-  --jp-brand-color0: var(--md-blue-700);
-  --jp-brand-color1: var(--md-blue-500);
-  --jp-brand-color2: var(--md-blue-300);
-  --jp-brand-color3: var(--md-blue-100);
+  --jp-brand-color0: var(--md-red-700);
+  --jp-brand-color1: var(--md-red-500);
+  --jp-brand-color2: var(--md-red-300);
+  --jp-brand-color3: var(--md-red-100);
 
   --jp-accent-color0: var(--md-green-700);
   --jp-accent-color1: var(--md-green-500);
@@ -271,7 +271,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
   /* A custom blend of MD grey and blue 600
    * See https://meyerweb.com/eric/tools/color-blend/#546E7A:1E88E5:5:hex */
-  --jp-cell-inprompt-font-color: #307fc1;
+  --jp-cell-inprompt-font-color: var(--jp-brand-color1);
   /* A custom blend of MD grey and orange 600
    * https://meyerweb.com/eric/tools/color-blend/#546E7A:F4511E:5:hex */
   --jp-cell-outprompt-font-color: #bf5b3d;
@@ -318,7 +318,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Input field styles */
 
-  --jp-input-box-shadow: inset 0 0 2px var(--md-blue-300);
+  --jp-input-box-shadow: inset 0 0 2px var(--md-red-300);
   --jp-input-active-background: var(--jp-layout-color1);
   --jp-input-hover-background: var(--jp-layout-color1);
   --jp-input-background: var(--md-grey-100);
@@ -365,4 +365,42 @@ all of MD as it is not optimized for dense, information rich UIs.
   /* Sidebar-related styles */
 
   --jp-sidebar-min-width: 180px;
+}
+
+.jp-DirListing-item.jp-mod-running .jp-DirListing-itemIcon:before {
+    content: '\2603'; /* snowman */
+    font-size: 10px;
+    position: absolute;
+    left: -8px;
+}
+
+
+.jp-Notebook, .jp-Launcher-body, .jp-DirListing-content {
+    background-image: linear-gradient(#FFFC,#FFFC),url(./logo.jpg);
+    background-repeat: no-repeat;
+    background-size: 120px 120px;
+    background-position: bottom left;
+}
+
+g.jp-icon-warn0.jp-icon-selectable, g.jp-icon-warn1.jp-icon-selectable {
+    fill: var(--md-green-700);
+    
+}
+
+button.jp-RunningSessions-itemShutdown.jp-mod-styled {
+    fill: var(--md-red-700);
+    
+}
+
+
+.lm-Menu-item.lm-mod-active {
+    background: var(--md-red-700);
+}
+
+button.jp-Button.bp3-button.bp3-minimal:hover {
+    background-color: var(--md-green-300);
+}
+
+.jp-DirListing-item:hover:not(.jp-mod-selected) {
+    background-color: var(--md-green-300);
 }
